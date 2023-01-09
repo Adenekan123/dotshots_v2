@@ -9,8 +9,6 @@ import Videos from "./routes/videos/videos.routes";
 import Navigation from "./components/navigation/navigate.component";
 
 const App = () => {
-  console.log(process.env);
-
   return (
     <ThemeProvider theme={theme}>
       <Template>
