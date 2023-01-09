@@ -1,6 +1,6 @@
 import { createClient } from "pexels";
 
-const pexel = createClient(process.env.REACT_APP_API_KEY);
+const pexel = createClient(process.env.PEXEL_API_KEY);
 const colors = {
   red: "#FF0000",
   orange: "#FFA500",
