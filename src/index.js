@@ -10,20 +10,25 @@ import { SearchProvider } from "./contexts/search.context";
 import { FilterProvider } from "./contexts/filter.context";
 import { SearchQueriesProvider } from "./contexts/search-queries.context";
 
+import { Provider } from "react-redux";
+import store from "./store/st";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <PictureProvider>
-        <SearchProvider>
-          <FilterProvider>
-            <SearchQueriesProvider>
-              <App />
-            </SearchQueriesProvider>
-          </FilterProvider>
-        </SearchProvider>
-      </PictureProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <PictureProvider>
+          <SearchProvider>
+            <FilterProvider>
+              <SearchQueriesProvider>
+                <App />
+              </SearchQueriesProvider>
+            </FilterProvider>
+          </SearchProvider>
+        </PictureProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
